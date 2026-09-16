@@ -1,5 +1,5 @@
 def move_to(x_goal: int, y_goal: int):
-	while get_pos_x() != x_goal and get_pos_y() != y_goal:
+	while get_pos_x() != x_goal or get_pos_y() != y_goal:
 
 		x, y = get_pos_x(), get_pos_y()
 		if x < x_goal:

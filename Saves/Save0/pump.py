@@ -5,7 +5,11 @@ size = get_world_size()
 #TODO True nearest-neighbor traversal 
 while True:
 	for i in range(size):
-		for j in range(size):
+		if i % 2 == 0:
+			col = range(size)
+		else:
+			col = range(size - 1, -1, -1)
+		for j in col:
 			move_to(i, j)
 			if can_harvest():
 				if get_ground_type() != Grounds.Soil:
