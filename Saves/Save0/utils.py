@@ -13,15 +13,12 @@
 # 	return True
 
 
-from math import integer
-
-
 def fill_list(size: int):
-    result = []
-    for i in range(size):
-        for j in range(size):
-            result.append((i, j))
-    return result
+	result = []
+	for i in range(size):
+		for j in range(size):
+			result.append((i, j))
+	return result
 
 def move_to(x_goal, y_goal):
 	size = get_world_size()
@@ -52,9 +49,9 @@ def move_to(x_goal, y_goal):
 
 
 def find_nearest_neighbor(grid_coords):
-    # check in a list of grid coordintaes to find the nearest neighbor.
+	# check in a list of grid coordintaes to find the nearest neighbor.
 	go_to = 999999999
-	min_dist = get_world_size()
+	min_dist = 999999999
 	x, y = get_pos_x(), get_pos_y()
 	for i in grid_coords:
 		x_grid_coord, y_grid_coord = i[0], i[1]

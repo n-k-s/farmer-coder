@@ -1,20 +1,15 @@
 from utils import *
 
+size = get_world_size()
 
-# size = get_world_size()
-# #TODO True nearest-neighbor traversal
-# while True:
-# 	for i in range(size):
-# 		if i % 2 == 0:
-# 			col = range(size)
-# 		else:
-# 			col = range(size - 1, -1, -1)
-# 		for j in col:
-# 			move_to(i, j)
-# 			if can_harvest():
-# 				if get_ground_type() != Grounds.Soil:
-# 					till()
-# 				plant(Entities.Pumpkin)
-# 	harvest()
-# 	move_to(0, 0)
+for x in range(size):
+	col = range(size) if x % 2 == 0 else range(size - 1, -1, -1)
+	for y in col:
+		move_to(x, y)
+		if get_ground_type() != Grounds.Soil:
+			till()
+		plant(Entities.Pumpkin)
 
+while True:
+	harvest()
+	move_to(0, 0)

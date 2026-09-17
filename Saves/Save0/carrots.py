@@ -1,4 +1,3 @@
-from home_kit import *
 clear()
 while True:
 	for i in range(get_world_size()):
@@ -8,4 +7,4 @@ while True:
 				till()
 			plant(Entities.Carrot)
 			move(North)
-	move(East)	
+	move(East)
